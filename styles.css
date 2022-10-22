@@ -1,0 +1,511 @@
+/* Global Styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#home {
+  height: auto;
+  width: 100%;
+  background-color: #676666;
+  font-family: 'Trebuchet MS', sans-serif;
+  /* background-image: url(./images/background4.jpeg);
+  background-size: 100%;
+  background-position: center; */
+}
+
+/* NAV BAR */
+
+nav {
+  background: rgb(244, 231, 231);
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  /* padding-top: 45px; */
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+/* fixed nav */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: #676666;
+}
+.fixed-nav .links a {
+  color: #191919;
+}
+.fixed-nav .links a:hover {
+  color: #f8ad9d;
+}
+.fixed-nav .links-container {
+  height: auto !important;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: rgb(3, 3, 3);
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: rgb(9, 9, 9);
+  transform: rotate(90deg);
+}
+
+.logo {
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  letter-spacing: 1px;
+  height: 40px;
+}
+
+.links li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 25px;
+}
+
+.links a {
+  color: #f8ad9d;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.links a:hover {
+  color: rgb(121, 49, 49);
+  transition: 0.3s;
+  padding-left: 1.5rem;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.show-links {
+  height: 7rem;
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: auto;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+}
+
+span {
+  color: rgb(121, 49, 49);
+}
+
+/* .btn {
+  background-color: rgb(121, 49, 49);
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: transform 0.4s;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+} */
+
+/* CONTENT */
+
+.content {
+  width: 100%;
+  padding: 100px 0px;
+  text-align: center;
+  align-items: center;
+}
+
+h1 {
+  color: #f8ad9d;
+  margin: 20px 0px 20px 20px;
+  font-size: 90px;
+}
+
+h3 {
+  color: #f8ad9d;
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+h4 {
+  color: #fff;
+  letter-spacing: 3px;
+  font-size: 30px;
+}
+
+.help {
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.copy-link {
+  width: 300px;
+  max-width: 100%;
+  position: absolute;
+  left: 25%;
+}
+
+.copy-link-input {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 130px 14px 15px;
+  border: 2px solid rgb(121, 49, 49);
+  outline: none;
+  border-radius: 30px;
+  font-size: 13.5px;
+}
+
+.copy-link-button {
+  position: absolute;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 9px 28px;
+  border-radius: 30px;
+  background-color: rgb(121, 49, 49);
+  color: white;
+  /* box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585; */
+  top: 7px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.copy-link-button:hover {
+  background-color: rgb(207, 126, 132);
+  border: 2px solid rgb(121, 49, 49);
+  cursor: pointer;
+  flex-grow: 0;
+}
+
+button {
+  background-color: rgb(121, 49, 49);
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: transform 0.4s;
+}
+
+button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* ABOUT */
+
+#about {
+  width: 100%;
+  padding: 100px 0px;
+  background-color: #191919;
+}
+
+#about img {
+  height: auto;
+  width: 430px;
+}
+
+.about-text {
+  width: 550px;
+}
+
+.main {
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-text h2 {
+  color: white;
+  font-size: 75px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.about-text h5 {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+.about-text p {
+  color: rgb(207, 126, 132);
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+
+#about .main button:hover {
+  background-color: transparent;
+  border: 2px solid rgb(121, 49, 49);
+  cursor: pointer;
+}
+
+/* PROJECTS */
+
+#projects {
+  background: #101010;
+  width: 100%;
+  padding: 100px 0px;
+}
+
+.title {
+  color: white;
+  font-size: 70px;
+  width: 1130px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.card {
+  height: 500px;
+  width: 600px;
+  padding: 20px 35px;
+  background: #191919;
+  border-radius: 20px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* .card i {
+  font-size: 50px;
+  display: block;
+  text-align: center;
+  margin: 25px 0px;
+  color: rgb(121, 49, 49);
+} */
+
+h5 {
+  color: rgb(207, 126, 132);
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+#projects .box .card .img a {
+  height: 400px;
+  width: 300px;
+  display: flex;
+  justify-content: auto;
+  min-height: 400px;
+  cursor: pointer;
+  border: 5px solid transparent;
+  border-radius: 3px;
+}
+
+/* CONTACT */
+
+.contact-me {
+  width: 100%;
+  height: 290px;
+  background: #101010;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-me p {
+  color: #f8ad9d;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.contact-me .button-two {
+  background-color: rgb(121, 49, 49);
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: transform 0.4s;
+}
+
+.contact-me .button-two:hover {
+  background-color: transparent;
+  border: 2px solid rgb(121, 49, 49);
+  cursor: pointer;
+}
+
+/* SKILLS */
+
+#skills {
+  width: 100%;
+  padding: 100px 0px;
+  background-color: #191919;
+}
+
+#skills h2 {
+  color: white;
+  font-size: 75px;
+  width: 1130px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+#skills .skills-logo {
+  width: 1130px;
+  margin: 70px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#skills .skills-logo .skill {
+  margin: 40px auto;
+  justify-content: center;
+}
+
+/* FOOTER */
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #101010;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p:nth-child(1) {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+footer p:nth-child(2) {
+  color: rgb(207, 126, 132);
+  font-size: 17px;
+  width: 500px;
+  text-align: center;
+  line-height: 26px;
+}
+
+.social {
+  display: flex;
+}
+
+.social a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8ad9d;
+  border-radius: 50%;
+  margin: 22px 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.social a:hover {
+  transform: scale(1.3);
+  transition: 0.3s;
+}
+
+.end {
+  position: absolute;
+  color: rgb(121, 49, 49);
+  bottom: 35px;
+  font-size: 14px;
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
